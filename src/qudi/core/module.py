@@ -111,6 +111,7 @@ class Base(QtCore.QObject, metaclass=ModuleMeta):
     * Reload module data (from saved variables)
     """
     _threaded = False
+    _interface = None
 
     # FIXME: This __new__ implementation has the sole purpose to circumvent a known PySide2(6) bug.
     #  See https://bugreports.qt.io/browse/PYSIDE-1434 for more details.

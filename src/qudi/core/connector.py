@@ -55,6 +55,7 @@ class Connector:
     def __call__(self) -> Any:
         """ Return reference to the module that this connector is connected to. """
         if self.is_connected:
+            setattr(self._obj_proxy, '_interface', self.interface)
             return self._obj_proxy
         if self.optional:
             return None
